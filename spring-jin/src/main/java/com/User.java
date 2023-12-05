@@ -1,9 +1,9 @@
-package com.wangjin;
+package com;
 
 import java.util.Date;
 
 public class User {
-
+	public static final String LOG_JIN = "Jin::: --> ";
 	private int id;
 	private String userName;
 	private Date birth;

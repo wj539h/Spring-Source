@@ -21,6 +21,7 @@ import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 
+import com.wangjin.User;
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
 import org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -134,7 +135,10 @@ public abstract class AnnotationConfigUtils {
 	 * @param registry the registry to operate on
 	 */
 	public static void registerAnnotationConfigProcessors(BeanDefinitionRegistry registry) {
-		registerAnnotationConfigProcessors(registry, null);
+		Set<BeanDefinitionHolder> set = registerAnnotationConfigProcessors(registry, null);
+		set.forEach((holder)->{
+			System.out.println(User.LOG_JIN+holder);
+		});
 	}
 
 	/**

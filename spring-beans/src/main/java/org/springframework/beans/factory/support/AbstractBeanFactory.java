@@ -35,6 +35,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import com.User;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeansException;
@@ -132,7 +133,7 @@ class MyOFOut<T> implements ObjectFactory<T> {
 	public T getObject() throws BeansException {
 		try {
 			T t = (T)abf.createBean(beanName, mbd, args);
-			System.out.println("%%%***%%%----"+t);
+			System.out.println(User.LOG_JIN+t);
 			return t;
 		}
 		catch (BeansException ex) {

@@ -7,14 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-beans" />
-        <module name="spring-context" />
         <module name="spring-core" />
+        <module name="spring-jin" />
+        <module name="spring-context" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring-beans" target="1.8" />
       <module name="spring-context" target="1.8" />
       <module name="spring-core" target="1.8" />
+      <module name="spring-jin" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
